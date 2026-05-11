@@ -1,9 +1,9 @@
 """
 Flask Application Wrapper for Render Deployment
-Wraps the simple_server_final.py for WSGI compatibility
+Wraps the simple_server.py for WSGI compatibility
 """
 
-from simple_server_final import VOTAIServer
+from simple_server import VOTAIServer
 import sys
 import os
 
