@@ -7,7 +7,11 @@ joblib==1.3.1
 tqdm==4.65.0
 
 # Web server dependencies (no TensorFlow needed for final version)
-gunicorn==21.2.0
+gunicorn==20.1.0
+
+# Build dependencies
+setuptools==65.5.0
+wheel==0.40.0
 
 # Optional: If you want to use TensorFlow models in the future
 # tensorflow==2.15.0
