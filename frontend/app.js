@@ -323,7 +323,6 @@ async function loadSystemStats() {
             total_runs: 1842,
             model_status: 'Active',
             avg_inference: 12,
-            last_run: 'Oct 24 14:22 UTC',
             mean_soh: 0.862,
             std_dev_soh: 0.041,
             features: 18
