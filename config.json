@@ -1,0 +1,28 @@
+{
+  "data_file": "data/battery_data.csv",
+  "sequence_length": 50,
+  "feature_columns": [
+    "voltage",
+    "current", 
+    "temperature",
+    "capacity",
+    "cycle_number",
+    "discharge_time",
+    "charge_time"
+  ],
+  "model_params": {
+    "lstm_units": [128, 64, 32],
+    "dropout_rate": 0.3,
+    "learning_rate": 0.001
+  },
+  "training_params": {
+    "epochs": 100,
+    "batch_size": 32,
+    "patience": 15,
+    "test_size": 0.2,
+    "val_size": 0.1
+  },
+  "model_save_dir": "models",
+  "results_dir": "results",
+  "use_attention": false
+}

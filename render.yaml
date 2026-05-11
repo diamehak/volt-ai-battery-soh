@@ -1,0 +1,36 @@
+services:
+  # Web Service for VOLT AI Battery SoH Prediction System
+  - type: web
+    name: volt-ai-battery-soh
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn simple_server_final:app --bind 0.0.0.0:$PORT --workers 3 --timeout 120"
+    healthCheckPath: /api/health
+    
+    # Environment variables
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.5
+      - key: PORT
+        value: 10000
+    
+    # Auto-deploy from main branch
+    autoDeploy: true
+    
+    # Build configuration
+    buildContext: .
+    
+    # Static file serving
+    staticPublishPath: frontend
+    staticPublishDir: .
+    
+    # Performance settings
+    numInstances: 1
+    memory: 512Mi
+    
+    # Region (closest to your users)
+    region: oregon
+    
+    # Custom domain (optional - you can add this later)
+    # customDomain: volt-ai.yourdomain.com
