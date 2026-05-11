@@ -29,8 +29,8 @@ services:
     numInstances: 1
     memory: 512Mi
     
-    # Region (closest to your users)
-    region: oregon
+    # Region (closest to your users - Singapore for India)
+    region: singapore
     
     # Custom domain (optional - you can add this later)
     # customDomain: volt-ai.yourdomain.com
